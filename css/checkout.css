@@ -193,34 +193,3 @@
     font-size: 1.2rem;
     color: #2c3e50;
 }
-
-@media (max-width: 768px) {
-    .checkout-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .form-row.three-cols {
-        grid-template-columns: 1fr;
-    }
-    
-    .checkout-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .checkout-hero {
-        padding: 60px 0;
-    }
-    
-    .checkout-content {
-        padding: 60px 0;
-    }
-    
-    .order-summary {
-        position: static;
-    }
-}
