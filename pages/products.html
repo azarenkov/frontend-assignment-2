@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gadget Store - Products</title>
+    <title>Products - GadgetStore</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/products.css">
 </head>
@@ -15,75 +15,55 @@
         </div>
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="checkout.html">Checkout</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <section class="products-hero">
+    <section class="products">
         <div class="container">
             <h1>Our Products</h1>
-            <p>Explore our collection of amazing gadgets</p>
-        </div>
-    </section>
-
-    <section class="products-grid">
-        <div class="container">
-            <div class="product-card">
-                <div class="product-image">
+            <div class="products-grid">
+                <div class="product-card" onclick="openProductDetails('smartphone', 'Premium Smartphone', 699.99, '../assets/images/smartphone.jpeg')">
                     <img src="../assets/images/smartphone.jpeg" alt="Smartphone">
+                    <h3>Premium Smartphone</h3>
+                    <p class="price">$699.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <h3>Smartphone</h3>
-                <p>Latest flagship smartphone with advanced features</p>
-                <div class="price">$699</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
+                <div class="product-card" onclick="openProductDetails('laptop', 'Gaming Laptop', 1299.99, '../assets/images/laptop.jpg')">
                     <img src="../assets/images/laptop.jpg" alt="Laptop">
+                    <h3>Gaming Laptop</h3>
+                    <p class="price">$1,299.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <h3>Laptop</h3>
-                <p>High-performance laptop for work and gaming</p>
-                <div class="price">$1299</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/headphones.jpeg" alt="Headphones">
-                </div>
-                <h3>Headphones</h3>
-                <p>Wireless noise-canceling headphones</p>
-                <div class="price">$299</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/smartwatch.jpeg" alt="Smart Watch">
-                </div>
-                <h3>Smart Watch</h3>
-                <p>Feature-rich smartwatch with health tracking</p>
-                <div class="price">$399</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
+                <div class="product-card" onclick="openProductDetails('tablet', 'Pro Tablet', 599.99, '../assets/images/tablet.jpg')">
                     <img src="../assets/images/tablet.jpg" alt="Tablet">
+                    <h3>Pro Tablet</h3>
+                    <p class="price">$599.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <h3>Tablet</h3>
-                <p>Portable tablet for entertainment and productivity</p>
-                <div class="price">$499</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
+                <div class="product-card" onclick="openProductDetails('camera', 'Digital Camera', 899.99, '../assets/images/camera.jpg')">
                     <img src="../assets/images/camera.jpg" alt="Camera">
+                    <h3>Digital Camera</h3>
+                    <p class="price">$899.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <h3>Camera</h3>
-                <p>Professional camera for photography enthusiasts</p>
-                <div class="price">$899</div>
+                <div class="product-card" onclick="openProductDetails('headphones', 'Wireless Headphones', 199.99, '../assets/images/headphones.jpeg')">
+                    <img src="../assets/images/headphones.jpeg" alt="Headphones">
+                    <h3>Wireless Headphones</h3>
+                    <p class="price">$199.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" onclick="openProductDetails('smartwatch', 'Smart Watch', 399.99, '../assets/images/smartwatch.jpeg')">
+                    <img src="../assets/images/smartwatch.jpeg" alt="Smart Watch">
+                    <h3>Smart Watch</h3>
+                    <p class="price">$399.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
         </div>
     </section>
@@ -93,5 +73,20 @@
     <p>&copy; 2025 GadgetStore. All rights reserved.</p>
     <p>Team Members: Alexey Azarenkov, Timur Imbergenov, Ali Yerbolatov</p>
 </footer>
+
+<script>
+    function openProductDetails(productId, productName, price, imageSrc) {
+        const productData = {
+            id: productId,
+            name: productName,
+            price: price,
+            image: imageSrc
+        };
+        sessionStorage.setItem('selectedProduct', JSON.stringify(productData));
+
+        // Navigate to product details page
+        window.location.href = 'product-details.html';
+    }
+</script>
 </body>
 </html>
