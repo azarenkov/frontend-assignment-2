@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget Store - Checkout</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <h1>GadgetStore</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="checkout-hero">
+        <div class="container">
+            <h1>Checkout</h1>
+            <p>Complete your order securely</p>
+        </div>
+    </section>
+
+    <section class="checkout-content">
+        <div class="container">
+            <div class="checkout-wrapper">
+                <div class="checkout-form-section">
+                    <h2>Billing Information</h2>
+                    <form class="checkout-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddress">Email Address</label>
+                            <input type="email" id="emailAddress" name="emailAddress" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+
+                        <div class="form-row three-cols">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="region">Region</label>
+                                <input type="text" id="region" name="region" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zipCode">ZIP Code</label>
+                                <input type="text" id="zipCode" name="zipCode" required>
+                            </div>
+                        </div>
+
+                        <h3>Payment Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardName">Name on Card</label>
+                            <input type="text" id="cardName" name="cardName" required>
+                        </div>
+
+                        <button type="submit" class="submit-button">Place Order</button>
+                    </form>
+                </div>
+
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="../assets/images/smartphone.jpeg" alt="Smartphone" class="item-image">
+                            <div class="item-details">
+                                <h4>Smartphone</h4>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div class="item-price">$699.00</div>
+                        </div>
+
+                        <div class="cart-item">
+                            <img src="../assets/images/headphones.jpeg" alt="Headphones" class="item-image">
+                            <div class="item-details">
+                                <h4>Headphones</h4>
+                                <p>Qty: 1</p>
+                            </div>
+                            <div class="item-price">$299.00</div>
+                        </div>
+                    </div>
+
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Subtotal:</span>
+                            <span>$998.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Shipping:</span>
+                            <span>$19.99</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Tax:</span>
+                            <span>$81.84</span>
+                        </div>
+                        <div class="price-row total-row">
+                            <span>Total:</span>
+                            <span>$1,099.83</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 GadgetStore. All rights reserved.</p>
+    <p>Team Members: Alexey Azarenkov, Timur Imbergenov, Ali Yerbolatov</p>
+</footer>
+</body>
+</html>
