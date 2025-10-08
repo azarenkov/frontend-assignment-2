@@ -1,159 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gadget Store - Checkout</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/checkout.css">
-</head>
-<body>
-<header>
-    <nav>
-        <div class="logo">
-            <h1>GadgetStore</h1>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <section class="checkout-hero">
-        <div class="container">
-            <h1>Checkout</h1>
-            <p>Complete your order securely</p>
-        </div>
-    </section>
-
-    <section class="checkout-content">
-        <div class="container">
-            <div class="checkout-wrapper">
-                <div class="checkout-form-section">
-                    <h2>Billing Information</h2>
-                    <form class="checkout-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="emailAddress">Email Address</label>
-                            <input type="email" id="emailAddress" name="emailAddress" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phoneNumber">Phone Number</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="address">Street Address</label>
-                            <input type="text" id="address" name="address" required>
-                        </div>
-
-                        <div class="form-row three-cols">
-                            <div class="form-group">
-                                <label for="city">City</label>
-                                <input type="text" id="city" name="city" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="region">Region</label>
-                                <input type="text" id="region" name="region" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="zipCode">ZIP Code</label>
-                                <input type="text" id="zipCode" name="zipCode" required>
-                            </div>
-                        </div>
-
-                        <h3>Payment Information</h3>
-                        
-                        <div class="form-group">
-                            <label for="cardNumber">Card Number</label>
-                            <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000" required>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="expiryDate">Expiry Date</label>
-                                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="cvv">CVV</label>
-                                <input type="text" id="cvv" name="cvv" placeholder="123" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cardName">Name on Card</label>
-                            <input type="text" id="cardName" name="cardName" required>
-                        </div>
-
-                        <button type="submit" class="submit-button">Place Order</button>
-                    </form>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us - GadgetStore</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/contact.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html">
+                        <h1 class="mb-0">GadgetStore</h1>
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html"
+                                    >Products</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html"
+                                    >Contact Us</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html"
+                                    >About Us</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="checkout.html"
+                                    >Checkout</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
+        </header>
 
-                <div class="order-summary">
-                    <h2>Order Summary</h2>
-                    <div class="cart-items">
-                        <div class="cart-item">
-                            <img src="../assets/images/smartphone.jpeg" alt="Smartphone" class="item-image">
-                            <div class="item-details">
-                                <h4>Smartphone</h4>
-                                <p>Qty: 1</p>
-                            </div>
-                            <div class="item-price">$699.00</div>
-                        </div>
-
-                        <div class="cart-item">
-                            <img src="../assets/images/headphones.jpeg" alt="Headphones" class="item-image">
-                            <div class="item-details">
-                                <h4>Headphones</h4>
-                                <p>Qty: 1</p>
-                            </div>
-                            <div class="item-price">$299.00</div>
+        <main>
+            <section class="contact-hero py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1 class="display-4 mb-3">Contact Us</h1>
+                            <p class="lead">
+                                Get in touch with our friendly team
+                            </p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="price-breakdown">
-                        <div class="price-row">
-                            <span>Subtotal:</span>
-                            <span>$998.00</span>
+            <section class="contact-content py-5">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-12 col-lg-6">
+                            <div class="contact-info">
+                                <h2 class="mb-4">Get In Touch</h2>
+                                <div class="contact-details">
+                                    <div class="contact-item mb-4">
+                                        <h3 class="h5 text-primary">Address</h3>
+                                        <p class="mb-0">
+                                            Mangilik El Street, C1<br />
+                                            Astana City, 020000<br />
+                                            Kazakhstan
+                                        </p>
+                                    </div>
+                                    <div class="contact-item mb-4">
+                                        <h3 class="h5 text-primary">Phone</h3>
+                                        <p class="mb-0">+7 (555) 123-4567</p>
+                                    </div>
+                                    <div class="contact-item mb-4">
+                                        <h3 class="h5 text-primary">Email</h3>
+                                        <p class="mb-0">
+                                            something@gadgetstore.com
+                                        </p>
+                                    </div>
+                                    <div class="contact-item mb-4">
+                                        <h3 class="h5 text-primary">
+                                            Business Hours
+                                        </h3>
+                                        <p class="mb-0">
+                                            Monday - Friday: 9:00 AM - 6:00
+                                            PM<br />
+                                            Saturday: 10:00 AM - 4:00 PM<br />
+                                            Sunday: Closed
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="price-row">
-                            <span>Shipping:</span>
-                            <span>$19.99</span>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="contact-form-section">
+                                <h2 class="mb-4">Send us a Message</h2>
+                                <form class="contact-form">
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="fullName"
+                                                class="form-label"
+                                                >Full Name</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="fullName"
+                                                name="fullName"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="email"
+                                                class="form-label"
+                                                >Email Address</label
+                                            >
+                                            <input
+                                                type="email"
+                                                class="form-control"
+                                                id="email"
+                                                name="email"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="col-12">
+                                            <label
+                                                for="phone"
+                                                class="form-label"
+                                                >Phone Number</label
+                                            >
+                                            <input
+                                                type="tel"
+                                                class="form-control"
+                                                id="phone"
+                                                name="phone"
+                                            />
+                                        </div>
+                                        <div class="col-12">
+                                            <label
+                                                for="subject"
+                                                class="form-label"
+                                                >Subject</label
+                                            >
+                                            <select
+                                                class="form-select"
+                                                id="subject"
+                                                name="subject"
+                                                required
+                                            >
+                                                <option value="">
+                                                    Select a subject
+                                                </option>
+                                                <option value="general">
+                                                    General
+                                                </option>
+                                                <option value="support">
+                                                    Technical Support
+                                                </option>
+                                                <option value="orders">
+                                                    Order Issues
+                                                </option>
+                                                <option value="returns">
+                                                    Returns & Refunds
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label
+                                                for="message"
+                                                class="form-label"
+                                                >Message</label
+                                            >
+                                            <textarea
+                                                class="form-control"
+                                                id="message"
+                                                name="message"
+                                                rows="6"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button
+                                                type="submit"
+                                                class="btn btn-primary btn-lg w-100"
+                                            >
+                                                Send Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="price-row">
-                            <span>Tax:</span>
-                            <span>$81.84</span>
-                        </div>
-                        <div class="price-row total-row">
-                            <span>Total:</span>
-                            <span>$1,099.83</span>
-                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-2">
+                            &copy; 2025 GadgetStore. All rights reserved.
+                        </p>
+                        <p class="mb-0 small">
+                            Team Members: Alexey Azarenkov, Timur Imbergenov,
+                            Ali Yerbolatov
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</main>
+        </footer>
 
-<footer>
-    <p>&copy; 2025 GadgetStore. All rights reserved.</p>
-    <p>Team Members: Alexey Azarenkov, Timur Imbergenov, Ali Yerbolatov</p>
-</footer>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
