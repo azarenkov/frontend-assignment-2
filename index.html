@@ -256,7 +256,73 @@
                     </div>
                 </div>
             </section>
+
+            <section class="py-4 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="card shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">
+                                        <i class="fas fa-clock me-2"></i>Current Date & Time
+                                    </h5>
+                                    <p class="card-text fs-5 fw-semibold text-primary" id="current-datetime">
+                                        Loading...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="display-6 mb-4">Color Changer</h2>
+                            <button id="color-change-btn" class="btn btn-primary btn-lg px-5">
+                                <i class="fas fa-palette me-2"></i>Change Background Color
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5 bg-primary text-white text-center">
+                <div class="container">
+                    <h2 class="display-6 fw-bold mb-3">Stay Updated!</h2>
+                    <p class="lead mb-4">Subscribe to our newsletter for exclusive deals and updates</p>
+                    <button id="subscribe-btn" class="btn btn-light btn-lg px-5">
+                        <i class="fas fa-envelope me-2"></i>Subscribe Now
+                    </button>
+                </div>
+            </section>
         </main>
+
+        <div id="popup-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center;">
+            <div class="popup-content bg-white rounded p-4 position-relative" style="max-width: 500px; width: 90%; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                <button id="popup-close" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close"></button>
+                <h3 class="text-center mb-4">Subscribe to Our Newsletter</h3>
+                <form id="popup-form">
+                    <div class="mb-3">
+                        <label for="popup-name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="popup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="popup-email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="popup-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="popup-terms" required>
+                        <label class="form-check-label" for="popup-terms">
+                            I agree to receive promotional emails
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                </form>
+            </div>
+        </div>
 
         <footer class="bg-dark text-white py-4">
             <div class="container">
@@ -279,5 +345,9 @@
             src="https://kit.fontawesome.com/your-kit-id.js"
             crossorigin="anonymous"
         ></script>
+        
+        <script src="js/datetime.js"></script>
+        <script src="js/background-color.js"></script>
+        <script src="js/popup.js"></script>
     </body>
 </html>
