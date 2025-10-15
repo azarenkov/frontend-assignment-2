@@ -320,8 +320,8 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/form-validation.js"></script>
         <script>
-            // Load checkout data
             function loadCheckoutData() {
                 const checkoutData = JSON.parse(
                     sessionStorage.getItem("checkoutData"),
@@ -341,7 +341,6 @@
                     return;
                 }
 
-                // Display cart items
                 const cartItemsContainer =
                     document.getElementById("cart-items");
                 cartItemsContainer.innerHTML = "";
@@ -365,12 +364,10 @@
                     cartItemsContainer.appendChild(itemElement);
                 });
 
-                // Calculate totals
-                const tax = subtotal * 0.1; // 10% tax
-                const shipping = subtotal > 100 ? 0 : 10; // Free shipping over $100
+                const tax = subtotal * 0.1;
+                const shipping = subtotal > 100 ? 0 : 10;
                 const total = subtotal + tax + shipping;
 
-                // Update price breakdown
                 document.getElementById("subtotal").textContent =
                     "$" + subtotal.toFixed(2);
                 document.getElementById("tax").textContent =
@@ -381,13 +378,11 @@
                     "$" + total.toFixed(2);
             }
 
-            // Handle form submission
             document
                 .getElementById("checkout-form")
                 .addEventListener("submit", function (e) {
                     e.preventDefault();
 
-                    // Simple form validation
                     const requiredFields = this.querySelectorAll("[required]");
                     let isValid = true;
 
@@ -402,7 +397,6 @@
                     });
 
                     if (isValid) {
-                        // Simulate order processing
                         const button = this.querySelector(
                             'button[type="submit"]',
                         );
@@ -415,16 +409,13 @@
                             alert(
                                 "Order placed successfully! Thank you for your purchase.",
                             );
-                            // Clear cart
                             localStorage.removeItem("cart");
                             sessionStorage.removeItem("checkoutData");
-                            // Redirect to home page
                             window.location.href = "../index.html";
                         }, 2000);
                     }
                 });
 
-            // Format card number input
             document
                 .getElementById("cardNumber")
                 .addEventListener("input", function (e) {
@@ -438,7 +429,6 @@
                     }
                 });
 
-            // Format expiry date input
             document
                 .getElementById("expiryDate")
                 .addEventListener("input", function (e) {
@@ -450,7 +440,6 @@
                     e.target.value = value;
                 });
 
-            // Load data when page loads
             window.addEventListener("load", loadCheckoutData);
         </script>
     </body>
