@@ -72,10 +72,25 @@
                             </h1>
                         </div>
                     </div>
+                    
+                    <!-- Product Filter Buttons -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                                <button class="btn btn-primary filter-btn active" data-category="all">All Products</button>
+                                <button class="btn btn-outline-primary filter-btn" data-category="smartphones">Smartphones</button>
+                                <button class="btn btn-outline-primary filter-btn" data-category="laptops">Laptops</button>
+                                <button class="btn btn-outline-primary filter-btn" data-category="audio">Audio</button>
+                                <button class="btn btn-outline-primary filter-btn" data-category="wearables">Wearables</button>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="row g-4">
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div
                                 class="product-card h-100"
+                                data-category="smartphones"
                                 onclick="openProductDetails('smartphone', 'Premium Smartphone', 699.99, '../assets/images/smartphone.jpeg')"
                             >
                                 <div class="card-body text-center">
@@ -101,6 +116,7 @@
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div
                                 class="product-card h-100"
+                                data-category="laptops"
                                 onclick="openProductDetails('laptop', 'Gaming Laptop', 1299.99, '../assets/images/laptop.jpg')"
                             >
                                 <div class="card-body text-center">
@@ -172,6 +188,7 @@
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div
                                 class="product-card h-100"
+                                data-category="audio"
                                 onclick="openProductDetails('headphones', 'Wireless Headphones', 199.99, '../assets/images/headphones.jpeg')"
                             >
                                 <div class="card-body text-center">
@@ -197,6 +214,7 @@
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div
                                 class="product-card h-100"
+                                data-category="wearables"
                                 onclick="openProductDetails('smartwatch', 'Smart Watch', 399.99, '../assets/images/smartwatch.jpeg')"
                             >
                                 <div class="card-body text-center">
@@ -259,5 +277,10 @@
                 window.location.href = "product-details.html";
             }
         </script>
+        
+        <!-- Advanced JavaScript Features -->
+        <script src="../js/animations.js"></script>
+        <script src="../js/keyboard-navigation.js"></script>
+        <script src="../js/product-filter.js"></script>
     </body>
 </html>
