@@ -46,7 +46,7 @@ function filterProducts(category) {
     switch(category) {
         case 'all':
             productCards.forEach(card => {
-                card.style.display = 'block';
+                card.parentElement.style.display = 'block';
                 animateElement(card, 'fadeIn');
             });
             break;
@@ -54,10 +54,10 @@ function filterProducts(category) {
             productCards.forEach(card => {
                 const productCategory = card.getAttribute('data-category');
                 if (productCategory === 'smartphones') {
-                    card.style.display = 'block';
+                    card.parentElement.style.display = 'block';
                     animateElement(card, 'fadeIn');
                 } else {
-                    card.style.display = 'none';
+                    card.parentElement.style.display = 'none';
                 }
             });
             break;
@@ -65,10 +65,10 @@ function filterProducts(category) {
             productCards.forEach(card => {
                 const productCategory = card.getAttribute('data-category');
                 if (productCategory === 'laptops') {
-                    card.style.display = 'block';
+                    card.parentElement.style.display = 'block';
                     animateElement(card, 'fadeIn');
                 } else {
-                    card.style.display = 'none';
+                    card.parentElement.style.display = 'none';
                 }
             });
             break;
@@ -76,10 +76,10 @@ function filterProducts(category) {
             productCards.forEach(card => {
                 const productCategory = card.getAttribute('data-category');
                 if (productCategory === 'audio') {
-                    card.style.display = 'block';
+                    card.parentElement.style.display = 'block';
                     animateElement(card, 'fadeIn');
                 } else {
-                    card.style.display = 'none';
+                    card.parentElement.style.display = 'none';
                 }
             });
             break;
@@ -87,16 +87,16 @@ function filterProducts(category) {
             productCards.forEach(card => {
                 const productCategory = card.getAttribute('data-category');
                 if (productCategory === 'wearables') {
-                    card.style.display = 'block';
+                    card.parentElement.style.display = 'block';
                     animateElement(card, 'fadeIn');
                 } else {
-                    card.style.display = 'none';
+                    card.parentElement.style.display = 'none';
                 }
             });
             break;
         default:
             productCards.forEach(card => {
-                card.style.display = 'block';
+                card.parentElement.style.display = 'block';
             });
     }
 }

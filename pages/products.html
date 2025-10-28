@@ -10,6 +10,10 @@
         />
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/products.css" />
+        <link rel="stylesheet" href="../css/jquery-features.css" />
+        
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -70,6 +74,16 @@
                             <h1 class="text-center mb-5 display-4">
                                 Our Products
                             </h1>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Bar for Live Filter -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-8 mx-auto">
+                            <div class="search-container">
+                                <input type="text" id="product-search" class="form-control" 
+                                    placeholder="🔍 Search products..." />
+                            </div>
                         </div>
                     </div>
                     
@@ -274,13 +288,26 @@
                     "selectedProduct",
                     JSON.stringify(productData),
                 );
-                window.location.href = "product-details.html";
+                
+                // Fade out before navigation
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 0.15s ease';
+                
+                setTimeout(function() {
+                    window.location.href = "product-details.html";
+                }, 150);
             }
         </script>
         
-        <!-- Advanced JavaScript Features -->
         <script src="../js/animations.js"></script>
         <script src="../js/keyboard-navigation.js"></script>
         <script src="../js/product-filter.js"></script>
+        
+        <script src="../js/jquery-init.js"></script>
+        <script src="../js/jquery-search.js"></script>
+        <script src="../js/jquery-ux-elements.js"></script>
+        <script src="../js/jquery-notifications.js"></script>
+        <script src="../js/jquery-clipboard.js"></script>
+        <script src="../js/jquery-lazy-loading.js"></script>
     </body>
 </html>
