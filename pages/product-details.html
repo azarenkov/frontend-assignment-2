@@ -582,15 +582,6 @@
 
             // Load product data when page loads
             window.addEventListener("load", loadProductData);
-            
-            // Fade in on page load to prevent flash
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.2s ease';
-            
-            // Start fade-in immediately
-            setTimeout(function() {
-                document.body.style.opacity = '1';
-            }, 10);
         </script>
         
         <script src="../js/animations.js"></script>

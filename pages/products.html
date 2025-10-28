@@ -289,13 +289,7 @@
                     JSON.stringify(productData),
                 );
                 
-                // Fade out before navigation
-                document.body.style.opacity = '0';
-                document.body.style.transition = 'opacity 0.15s ease';
-                
-                setTimeout(function() {
-                    window.location.href = "product-details.html";
-                }, 150);
+                window.location.href = "product-details.html";
             }
         </script>
         
