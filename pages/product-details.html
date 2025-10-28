@@ -10,10 +10,14 @@
         />
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/product-details.css" />
+        <link rel="stylesheet" href="../css/jquery-features.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
+        
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -578,11 +582,25 @@
 
             // Load product data when page loads
             window.addEventListener("load", loadProductData);
+            
+            // Fade in on page load to prevent flash
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.2s ease';
+            
+            // Start fade-in immediately
+            setTimeout(function() {
+                document.body.style.opacity = '1';
+            }, 10);
         </script>
         
-        <!-- Advanced JavaScript Features -->
         <script src="../js/animations.js"></script>
         <script src="../js/keyboard-navigation.js"></script>
         <script src="../js/star-rating.js"></script>
+        
+        <script src="../js/jquery-init.js"></script>
+        <script src="../js/jquery-ux-elements.js"></script>
+        <script src="../js/jquery-notifications.js"></script>
+        <script src="../js/jquery-clipboard.js"></script>
+        <script src="../js/jquery-lazy-loading.js"></script>
     </body>
 </html>
