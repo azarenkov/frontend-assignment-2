@@ -582,6 +582,11 @@
 
             // Load product data when page loads
             window.addEventListener("load", loadProductData);
+            
+            // Fix for back button - ensure page is always visible
+            window.addEventListener('pageshow', function(event) {
+                document.body.style.opacity = '1';
+            });
         </script>
         
         <script src="../js/animations.js"></script>
