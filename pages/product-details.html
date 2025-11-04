@@ -9,6 +9,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/dark-mode.css" />
         <link rel="stylesheet" href="../css/product-details.css" />
         <link rel="stylesheet" href="../css/jquery-features.css" />
         <link
@@ -103,7 +104,7 @@
                             <div class="main-image-container">
                                 <img
                                     id="main-image"
-                                    src="../assets/images/smartphone.jpeg"
+                                    src="../assets/images/smartphone.png"
                                     alt="Product Image"
                                     class="img-fluid"
                                 />
@@ -112,7 +113,7 @@
                                 <div class="row g-2">
                                     <div class="col-3">
                                         <img
-                                            src="../assets/images/smartphone.jpeg"
+                                            src="../assets/images/smartphone.png"
                                             alt="Thumbnail 1"
                                             class="thumbnail active"
                                             onclick="changeMainImage(this.src)"
@@ -120,7 +121,7 @@
                                     </div>
                                     <div class="col-3">
                                         <img
-                                            src="../assets/images/laptop.jpg"
+                                            src="../assets/images/laptop.png"
                                             alt="Thumbnail 2"
                                             class="thumbnail"
                                             onclick="changeMainImage(this.src)"
@@ -128,7 +129,7 @@
                                     </div>
                                     <div class="col-3">
                                         <img
-                                            src="../assets/images/tablet.jpg"
+                                            src="../assets/images/tablet.png"
                                             alt="Thumbnail 3"
                                             class="thumbnail"
                                             onclick="changeMainImage(this.src)"
@@ -136,7 +137,7 @@
                                     </div>
                                     <div class="col-3">
                                         <img
-                                            src="../assets/images/camera.jpg"
+                                            src="../assets/images/camera.png"
                                             alt="Thumbnail 4"
                                             class="thumbnail"
                                             onclick="changeMainImage(this.src)"
@@ -239,16 +240,6 @@
                                         onclick="buyNow()"
                                     >
                                         <i class="fas fa-bolt me-2"></i>Buy Now
-                                    </button>
-                                </div>
-
-                                <div class="mt-3">
-                                    <button
-                                        type="button"
-                                        class="btn btn-outline-secondary"
-                                    >
-                                        <i class="fas fa-heart me-2"></i>Add to
-                                        Wishlist
                                     </button>
                                 </div>
                             </div>
@@ -589,6 +580,7 @@
             });
         </script>
         
+        <script src="../js/dark-mode.js"></script>
         <script src="../js/animations.js"></script>
         <script src="../js/keyboard-navigation.js"></script>
         <script src="../js/star-rating.js"></script>

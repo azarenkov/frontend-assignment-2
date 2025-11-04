@@ -66,7 +66,7 @@
     object-fit: contain;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    background-color: #f8f9fa;
+    background-color: transparent;
     padding: 15px;
     position: relative;
     z-index: 2;
