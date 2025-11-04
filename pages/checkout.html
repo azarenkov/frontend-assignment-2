@@ -9,6 +9,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/dark-mode.css" />
         <link rel="stylesheet" href="../css/checkout.css" />
         <link rel="stylesheet" href="../css/jquery-features.css" />
         <link
@@ -347,6 +348,14 @@
                     items = cart;
                 }
 
+                // Fix image extensions - convert .jpg and .jpeg to .png
+                items = items.map(item => {
+                    if (item.image) {
+                        item.image = item.image.replace(/\.(jpg|jpeg)$/i, '.png');
+                    }
+                    return item;
+                });
+
                 if (items.length === 0) {
                     document.getElementById("cart-items").innerHTML =
                         '<p class="text-center text-muted">No items in cart</p>';
@@ -455,6 +464,7 @@
             window.addEventListener("load", loadCheckoutData);
         </script>
         
+        <script src="../js/dark-mode.js"></script>
         <script src="../js/animations.js"></script>
         <script src="../js/keyboard-navigation.js"></script>
         <script src="../js/form-reset.js"></script>

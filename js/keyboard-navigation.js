@@ -41,6 +41,6 @@ function animateElement(element, animationType) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Keyboard shortcuts: Alt + Left/Right Arrow to navigate menu');
+    console.log('Keyboard shortcuts: Left/Right Arrow to navigate menu');
     initializeKeyboardNavigation();
 });

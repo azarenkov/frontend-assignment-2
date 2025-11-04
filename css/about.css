@@ -43,7 +43,7 @@
 .story-image img {
     max-height: 400px;
     object-fit: contain;
-    background-color: #f8f9fa;
+    background-color: transparent;
     padding: 2rem;
     border: 1px solid #e9ecef;
 }
