@@ -389,6 +389,10 @@ section {
     color: var(--text-primary);
 }
 
+[data-theme="dark"] .product-card .price {
+    color: #5aaaff !important;
+}
+
 .product-card .card-title {
     color: var(--text-primary) !important;
 }
@@ -674,6 +678,11 @@ section {
     color: var(--text-secondary);
 }
 
+[data-theme="dark"] .breadcrumb-item,
+[data-theme="dark"] .breadcrumb-item a {
+    color: #5aaaff !important;
+}
+
 .breadcrumb-item.active {
     color: var(--text-primary);
 }
@@ -695,6 +704,10 @@ section {
 
 .current-price {
     color: var(--accent-primary) !important;
+}
+
+[data-theme="dark"] .current-price {
+    color: #5aaaff !important;
 }
 
 .original-price {

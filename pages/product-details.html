@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../css/dark-mode.css" />
         <link rel="stylesheet" href="../css/product-details.css" />
         <link rel="stylesheet" href="../css/jquery-features.css" />
+        <link rel="stylesheet" href="../css/cart-sidebar.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -19,6 +20,17 @@
         
         <!-- jQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        
+        <style>
+            /* Hide content until product data is loaded */
+            .product-info {
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .product-info.loaded {
+                opacity: 1;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -64,6 +76,17 @@
                                 <a class="nav-link" href="checkout.html"
                                     >Checkout</a
                                 >
+                            </li>
+                            <li class="nav-item" id="auth-nav-item">
+                                <a class="nav-link" href="login.html">
+                                    <i class="fas fa-sign-in-alt me-1"></i>Login
+                                </a>
+                            </li>
+                            <li class="nav-item cart-button" onclick="toggleCart()">
+                                <a class="nav-link" style="cursor: pointer;">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span id="cart-badge" class="cart-badge" style="display: none;">0</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -186,10 +209,10 @@
                                     <span
                                         id="product-price"
                                         class="current-price h2"
-                                        >$699.99</span
+                                        ></span
                                     >
-                                    <span class="original-price">$899.99</span>
-                                    <span class="badge discount">Save 22%</span>
+                                    <span class="original-price"></span>
+                                    <span class="badge discount"></span>
                                 </div>
 
                                 <!-- Quantity Selection -->
@@ -326,6 +349,10 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Load currency converter BEFORE inline scripts -->
+        <script src="../js/currency-converter.js"></script>
+        
         <script>
             // Load product data from sessionStorage
             function loadProductData() {
@@ -335,8 +362,12 @@
                 if (productData) {
                     document.getElementById("product-title").textContent =
                         productData.name;
-                    document.getElementById("product-price").textContent =
-                        "$" + productData.price;
+                    
+                    // Set price in USD and store original value
+                    const priceElement = document.getElementById("product-price");
+                    priceElement.textContent = `$${productData.price}`;
+                    priceElement.setAttribute('data-original-price', productData.price);
+                    
                     document.getElementById("main-image").src =
                         productData.image;
                     document.getElementById("breadcrumb-product").textContent =
@@ -358,6 +389,25 @@
 
                     // Update product description based on product type
                     updateProductDescription(productData.id);
+                    
+                    // Wait a bit then trigger currency conversion if needed
+                    setTimeout(() => {
+                        if (typeof window.getCurrentCurrency === 'function') {
+                            const currencyInfo = window.getCurrentCurrency();
+                            if (currencyInfo && currencyInfo.code !== 'USD') {
+                                // Convert the price to the selected currency
+                                const priceElement = document.getElementById("product-price");
+                                const originalPrice = parseFloat(priceElement.getAttribute('data-original-price'));
+                                const rate = currencyInfo.rate;
+                                const symbol = currencyInfo.symbol;
+                                const convertedPrice = (originalPrice * rate).toFixed(currencyInfo.code === 'KZT' ? 0 : 2);
+                                priceElement.textContent = `${symbol}${convertedPrice}`;
+                            }
+                        }
+                        
+                        // Show content now that data is loaded and converted
+                        document.querySelector('.product-info').classList.add('loaded');
+                    }, 100);
                 } else {
                     // If no product data, redirect to products page
                     window.location.href = "products.html";
@@ -590,5 +640,7 @@
         <script src="../js/jquery-notifications.js"></script>
         <script src="../js/jquery-clipboard.js"></script>
         <script src="../js/jquery-lazy-loading.js"></script>
+        <script src="../js/auth.js"></script>
+        <script src="../js/cart-sidebar.js"></script>
     </body>
 </html>

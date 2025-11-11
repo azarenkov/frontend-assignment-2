@@ -88,9 +88,10 @@
 }
 
 .current-price {
-    color: #007bff !important;
+    color: #0d6efd !important;
     font-weight: 700;
     font-size: 2.5rem;
+    text-shadow: 0 0 2px rgba(13, 110, 253, 0.3);
 }
 
 .original-price {
