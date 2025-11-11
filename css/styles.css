@@ -46,7 +46,7 @@ main {
 
 /* Hero section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #94a4eb 0%, #764ba2 100%);
     color: white;
     padding: 100px 0;
     min-height: 60vh;
@@ -117,6 +117,26 @@ main {
 .feature p {
     color: #6c757d;
     line-height: 1.6;
+}
+
+/* Stay Updated section - smaller than hero */
+section.py-5.bg-primary.text-white.text-center {
+    padding: 2.5rem 0 !important;
+}
+
+section.py-5.bg-primary.text-white.text-center h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem !important;
+}
+
+section.py-5.bg-primary.text-white.text-center p.lead {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+section.py-5.bg-primary.text-white.text-center .btn {
+    padding: 10px 30px !important;
+    font-size: 1rem !important;
 }
 
 /* Footer */
@@ -209,7 +229,27 @@ footer {
     }
 
     .feature h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    
+    /* Make Stay Updated section smaller on mobile */
+    section.py-5.bg-primary.text-white.text-center {
+        padding: 1.5rem 0 !important;
+    }
+    
+    section.py-5.bg-primary.text-white.text-center h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    section.py-5.bg-primary.text-white.text-center p.lead {
+        font-size: 0.9rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    section.py-5.bg-primary.text-white.text-center .btn {
+        padding: 8px 20px !important;
+        font-size: 0.85rem !important;
     }
 }
 

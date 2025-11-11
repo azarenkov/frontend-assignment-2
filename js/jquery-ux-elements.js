@@ -24,28 +24,24 @@ function initAnimatedCounter() {
                     <div class="row text-center">
                         <div class="col-md-3 col-6 mb-4">
                             <div class="stat-box">
-                                <i class="fas fa-users fa-3x text-primary mb-3"></i>
                                 <h3 class="counter" data-target="1000">0</h3>
                                 <p>Happy Customers</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-6 mb-4">
                             <div class="stat-box">
-                                <i class="fas fa-box fa-3x text-primary mb-3"></i>
                                 <h3 class="counter" data-target="500">0</h3>
                                 <p>Products Sold</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-6 mb-4">
                             <div class="stat-box">
-                                <i class="fas fa-star fa-3x text-primary mb-3"></i>
                                 <h3 class="counter" data-target="50">0</h3>
                                 <p>5-Star Reviews</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-6 mb-4">
                             <div class="stat-box">
-                                <i class="fas fa-trophy fa-3x text-primary mb-3"></i>
                                 <h3 class="counter" data-target="25">0</h3>
                                 <p>Awards Won</p>
                             </div>

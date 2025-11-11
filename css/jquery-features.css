@@ -88,6 +88,11 @@
     border-radius: 15px;
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #stats-counter .stat-box:hover {
@@ -242,6 +247,15 @@ img[data-lazy-loaded="true"] {
     #stats-counter .stat-box {
         padding: 1rem;
         margin-bottom: 1rem;
+        min-height: 180px;
+    }
+    
+    #stats-counter p {
+        font-size: 0.95rem;
+    }
+    
+    #stats-counter i {
+        font-size: 2rem !important;
     }
     
     .autocomplete-item {
